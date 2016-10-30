@@ -1,0 +1,7 @@
+@mixin create-font($font-size, $font-family, $color, $text-shadow: null, $opacity: null) {
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $color;
+    text-shadow: $text-shadow;
+    opacity: $opacity;
+}
