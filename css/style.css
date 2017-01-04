@@ -1,18 +1,15 @@
 @font-face {
   font-family: 'Dosis-Font';
   src: url("../fonts/dosis-regular-webfont.eot");
-  src: url("../fonts/dosis-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/dosis-regular-webfont.woff") format("woff"), url("../fonts/Dosis-Regular.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  src: url("../fonts/dosis-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/dosis-regular-webfont.woff") format("woff"), url("../fonts/Dosis-Regular.otf") format("truetype"); }
 @font-face {
   font-family: 'Andada-Font';
   src: url("../fonts/andada-regular-webfont.eot");
-  src: url("../fonts/andada-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/andada-regular-webfont.woff") format("woff"), url("../fonts/Andada-Regular.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  src: url("../fonts/andada-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/andada-regular-webfont.woff") format("woff"), url("../fonts/Andada-Regular.otf") format("truetype"); }
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Andada-Font", serif; }
 
 .wrapper {
   padding: 5% 15%; }
@@ -20,76 +17,69 @@ body {
 .wrapper-small {
   padding: 5% 15% 0 15%; }
 
-/*masthead-image */
 .huge-images {
   width: 100%;
-  height: auto;
   z-index: -1; }
 
-.masthead-image {
+/*masthead-image */
+.masthead {
   position: relative; }
-
-.masthead-iphone {
-  position: absolute;
-  right: 15%;
-  top: 35%;
-  width: 35%;
-  height: auto;
-  z-index: 999; }
-
-.take-logo {
-  position: absolute;
-  left: 15%;
-  top: 5%;
-  width: 5%;
-  height: auto; }
-
-.masthead-text {
-  position: absolute;
-  left: 15%;
-  top: 40%;
-  width: 25%; }
-  .masthead-text h1 {
-    font-size: 3.5vw;
-    font-family: "Dosis-Font", sans-serif;
-    color: #ffffff;
-    text-shadow: 1px 1px #000000; }
-  .masthead-text p {
-    font-size: 1.2vw;
-    font-family: "Andada-Font", serif;
-    color: #ffffff;
-    text-shadow: 0px 1px #000000;
-    margin-top: 10%; }
+  .masthead .masthead-phone {
+    position: absolute;
+    right: 15%;
+    top: 35%;
+    width: 35%;
+    z-index: 999; }
+  .masthead .page-logo {
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    width: 5%; }
+  .masthead .masthead-contents {
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    width: 30%; }
+    .masthead .masthead-contents .masthead-contents-header {
+      font-size: 5vw;
+      font-family: "Dosis-Font", sans-serif;
+      color: #ffffff;
+      text-shadow: 1px 1px #000000; }
+    .masthead .masthead-contents .masthead-contents-description {
+      font-size: 1.7vw;
+      font-family: "Andada-Font", serif;
+      color: #ffffff;
+      text-shadow: 0px 1px #000000;
+      margin-top: 10%; }
 
 /* end masthead-image */
 /* text */
-.text {
+.introduction h1 {
+  font-size: 3vw;
+  font-family: "Dosis-Font", sans-serif;
+  color: #222626;
+  opacity: 0.8; }
+.introduction p {
+  font-size: 1vw;
+  font-family: "Andada-Font", serif;
+  color: #959595; }
+
+.introduction-contents {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  opacity: 0; }
-  .text h1 {
-    font-size: 2.5vw;
-    font-family: "Dosis-Font", sans-serif;
-    color: #222626;
-    opacity: 0.8;
-    margin-bottom: 10%; }
-  .text p {
-    font-size: 0.8vw;
-    font-family: "Andada-Font", serif;
-    color: #959595; }
+  display: flex; }
 
-.text-box {
+.introduction-box {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
-  .text-box:nth-child(1) {
+  .introduction-box:nth-child(1) {
     padding-right: 2%; }
-  .text-box:nth-child(2) {
+  .introduction-box:nth-child(2) {
     padding-left: 2%; }
-  .text-box .take-all-text {
+  .introduction-box .introduction-box-text-wrapper {
     margin-top: 30%; }
 
 /* end text */
@@ -98,34 +88,34 @@ body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  min-height: 14vw; }
+  display: flex; }
   .boxGrid h1 {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
-    margin: 1rem 0; }
+    margin: 2vw 0; }
   .boxGrid p {
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-family: "Andada-Font", serif;
     color: #ffffff;
     width: 80%;
-    margin: 2.5rem 0; }
+    margin: 3vw 0 5vw 0; }
   .boxGrid .arrow {
-    font-size: 0.9vw;
+    font-size: 1vw;
     font-family: "Andada-Font", serif;
     color: #ffffff;
     position: absolute;
-    bottom: 2rem;
+    bottom: 10%;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer; }
     .boxGrid .arrow:hover {
       -webkit-animation: link-animation 1.5s forwards;
               animation: link-animation 1.5s forwards; }
+    .boxGrid .arrow .icon-right {
+      margin-left: 0.5vw; }
   .boxGrid .heart {
     font-size: 1.3vw;
-    font-family: "Andada-Font", serif;
     position: absolute;
     font-weight: bold;
     bottom: 9%;
@@ -148,9 +138,6 @@ body {
 
 .boxGrid-box, .boxGrid-box-2 {
   position: relative;
-  -webkit-transform: scale(0, 0);
-      -ms-transform: scale(0, 0);
-          transform: scale(0, 0);
   padding: 0 3%;
   -webkit-transition: 1s;
           transition: 1s; }
@@ -168,7 +155,7 @@ body {
     background-color: #615f7d; }
   .boxGrid-box-1:nth-child(3) {
     background-image: url("../images/boxGrid-boxSmall.jpg");
-    background-size: 100% 100%; }
+    background-size: cover; }
   .boxGrid-box-1:last-of-type {
     background-color: #82ca9c; }
 
@@ -178,14 +165,13 @@ body {
       -ms-flex: 2.22;
           flex: 2.22;
   background-image: url("../images/boxGrid-boxLarge.jpg");
-  background-size: 100% 100%; }
+  background-size: cover; }
   .boxGrid-box-2 p {
     width: 60%; }
 
 /* end boxGrid */
-/* fourCol */
-.fourCol {
-  opacity: 0;
+/* columns */
+.columns {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,169 +179,161 @@ body {
   -webkit-flex-flow: wrap;
       -ms-flex-flow: wrap;
           flex-flow: wrap; }
-  .fourCol h1 {
-    font-size: 2.5vw;
+  .columns h1 {
+    font-size: 3vw;
     font-family: "Dosis-Font", sans-serif;
     color: #222626;
     opacity: 0.8;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%; }
-  .fourCol h4 {
-    font-size: 0.9vw;
+  .columns h4 {
+    font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #222626;
     opacity: 0.8;
     margin-bottom: 5%; }
-  .fourCol p {
-    font-size: 0.9vw;
+  .columns p {
+    font-size: 1vw;
     font-family: "Andada-Font", serif;
     color: #959595; }
 
-.fourCol-box {
+.columns-box {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 1%; }
+  margin-right: 2vw; }
 
-/* end fourCol */
-/* fullImage */
-.fullImage {
+/* end ccolumnts */
+/* backgroundImage */
+.backgroundImage {
   position: relative;
   background-color: #82ca9c; }
-  .fullImage h1 {
-    font-size: 3.3vw;
+  .backgroundImage .backgroundImage-contents {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    width: 35%; }
+  .backgroundImage h1 {
+    font-size: 4.5vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
     text-shadow: 1px 1px #000000;
     margin-bottom: 10%; }
-  .fullImage p, .fullImage a {
-    font-size: 1vw;
+  .backgroundImage p, .backgroundImage a {
+    font-size: 1.4vw;
     font-family: "Andada-Font", serif;
     color: #ffffff;
     text-shadow: 0px 1px #000000; }
-  .fullImage p {
+  .backgroundImage p {
     margin-bottom: 5%; }
-  .fullImage a {
+  .backgroundImage a {
+    display: inline-block;
     position: relative;
     text-decoration: none;
-    font-weight: bold;
-    width: 30%; }
+    font-weight: bold; }
+    .backgroundImage a .icon-right {
+      margin-left: 0.5vw; }
+    .backgroundImage a:hover {
+      -webkit-animation: link-animation 1.5s forwards;
+              animation: link-animation 1.5s forwards; }
 
-.fullImage-text {
-  position: absolute;
-  left: -35%;
-  top: 40%;
-  width: 35%; }
-
-/* end fullImage */
+/* end backgroundImage */
 /* colour */
-.colour {
+.colour-columns {
   background-color: #82ca9c; }
-  .colour h1 {
-    font-size: 2.5vw;
+  .colour-columns h1 {
+    font-size: 3vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%; }
-  .colour p, .colour h4 {
-    font-size: 0.9vw;
+  .colour-columns .columns h4 {
+    font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #ffffff; }
-  .colour h4 {
-    margin-bottom: 5%; }
-
-.colour-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 1%; }
-
-.colour-content {
-  opacity: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap; }
+  .colour-columns .columns p {
+    font-size: 1vw;
+    font-family: "Andada-Font", serif;
+    color: #ffffff; }
 
 /* end colour */
-/*buying */
+/* buying */
 .buying {
   background-color: #f6f7fa;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-
-.buying-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 5%;
-  -webkit-transition: 2s;
-          transition: 2s; }
-  .buying-box:hover span {
-    background-color: #bd8cbf; }
-  .buying-box:hover {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.2); }
-  .buying-box:nth-child(1) {
-    margin-right: 5%; }
-  .buying-box:nth-child(2) {
-    margin-left: 5%; }
-  .buying-box span {
-    font-size: 0.8vw;
-    border-radius: 5%;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 1.5%;
-    background-color: #e1e1e1;
+  .buying .buying-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 5%;
     -webkit-transition: 2s;
-            transition: 2s;
-    text-transform: uppercase;
-    margin-top: 8%;
-    display: inline-block; }
-  .buying-box h1 {
-    font-size: 2.5vw;
-    font-family: "Dosis-Font", sans-serif;
-    color: #222626;
-    opacity: 0.8;
-    margin: 5% 0; }
-  .buying-box p {
-    font-size: 0.8vw;
-    font-family: "Andada-Font", serif;
-    color: #959595;
-    margin-bottom: 8%; }
-  .buying-box a {
-    font-size: 1vw;
-    font-family: "Dosis-Font", sans-serif;
-    color: #ffffff;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    width: 30%;
-    margin: 5% 0;
-    font-weight: bold;
-    background-color: #82ca9c;
-    border: none;
-    padding: 3% 5%;
-    border-radius: 5%;
-    letter-spacing: 0.1vw;
-    cursor: pointer;
-    -webkit-transition: 1s;
-            transition: 1s;
-    text-transform: uppercase; }
-    .buying-box a:hover {
-      background-color: #6ce096; }
+            transition: 2s; }
+    .buying .buying-box:hover .buying-box-label {
+      background-color: #bd8cbf; }
+    .buying .buying-box:hover {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.2); }
+    .buying .buying-box:nth-child(1) {
+      margin-right: 5%; }
+    .buying .buying-box:nth-child(2) {
+      margin-left: 5%; }
+    .buying .buying-box .buying-box-label {
+      font-size: 1vw;
+      border-radius: 5%;
+      color: #ffffff;
+      padding: 2%;
+      background-color: #e1e1e1;
+      -webkit-transition: 2s;
+              transition: 2s;
+      text-transform: uppercase;
+      margin-top: 8%;
+      display: inline-block; }
+    .buying .buying-box .buying-header {
+      font-size: 3.5vw;
+      font-family: "Dosis-Font", sans-serif;
+      color: #222626;
+      opacity: 0.8;
+      margin: 5% 0; }
+    .buying .buying-box .buying-description {
+      font-size: 1vw;
+      font-family: "Andada-Font", serif;
+      color: #959595;
+      margin-bottom: 8%; }
+    .buying .buying-box .buying-button {
+      font-size: 1.2vw;
+      font-family: "Dosis-Font", sans-serif;
+      color: #ffffff;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      width: 35%;
+      margin: 5% 0;
+      font-weight: bold;
+      background-color: #82ca9c;
+      border: none;
+      padding: 3% 5%;
+      border-radius: 5%;
+      letter-spacing: 0.1vw;
+      cursor: pointer;
+      -webkit-transition: 1s;
+              transition: 1s;
+      text-transform: uppercase; }
+      .buying .buying-box .buying-button:hover {
+        background-color: #6ce096; }
+    .buying .buying-box .buying-icons {
+      color: #959595;
+      margin-bottom: 8%; }
+      .buying .buying-box .buying-icons i {
+        font-size: 1.3vw; }
 
-/* buying */
+/* end buying */
 /* footer */
 .footer {
   background-color: #192431;
@@ -364,30 +342,24 @@ body {
   display: -ms-flexbox;
   display: flex; }
   .footer h4 {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #ffffff;
     margin-bottom: 5%; }
   .footer p {
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-family: "Andada-Font", serif;
     color: #ffffff; }
-  .footer span {
-    font-size: 0.6vw;
-    font-family: "Andada-Font", serif;
-    color: #57697f;
-    margin-top: 15%;
-    display: block;
-    width: 50%; }
-  .footer input {
+  .footer input[type="email"] {
     width: 80%;
     height: 2vw;
     border: none;
     border-radius: 2% 0px 0px 2%;
     font-size: 1.3vw;
     float: left;
-    padding: 0; }
-  .footer button {
+    padding: 0;
+    margin-bottom: 5%; }
+  .footer .contact-button {
     width: 20%;
     height: 2vw;
     border: none;
@@ -398,225 +370,76 @@ body {
     float: right;
     font-size: 1.2vw;
     -webkit-transition: 1s;
-            transition: 1s; }
-  .footer button:hover {
-    cursor: pointer;
-    background-color: #70dc97; }
+            transition: 1s;
+    margin-bottom: 5%; }
+    .footer .contact-button:hover {
+      cursor: pointer;
+      background-color: #70dc97; }
   .footer ul {
     list-style-type: none;
     padding: 0;
     margin: 1vw 0; }
-  .footer li {
-    height: 1.7vw; }
   .footer a {
     text-decoration: none;
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-family: "Andada-Font", serif;
     color: #ffffff; }
-
-.footer-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  opacity: 0; }
-  .footer-box:nth-child(1) {
-    margin-right: 20%; }
-
-.footer-text {
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; }
-
-.footer-form {
-  width: 50%; }
-
-.footer-list-container {
-  margin-top: 10%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-
-.footer-list-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+  .footer .footer-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    .footer .footer-box:nth-child(1) {
+      margin-right: 20%; }
+  .footer .footer-list-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .footer .footer-list {
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .footer .footer-list a {
+      padding: 0.2vw 0;
+      display: block; }
+  .footer .footer-contents {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; }
+  .footer .footer-form {
+    width: 50%; }
+    .footer .footer-form li {
+      font-size: 1.2vw; }
+    .footer .footer-form .form-description {
+      font-size: 0.8vw;
+      font-family: "Andada-Font", serif;
+      color: #57697f;
+      padding-top: 10%;
+      display: block; }
 
 /* end footer */
-.fullImage-animation {
-  -webkit-animation: fullImage-animation 1.5s forwards;
-          animation: fullImage-animation 1.5s forwards; }
-
-.boxGrid-animation {
-  -webkit-animation: boxGrid-animation 0.8s forwards;
-          animation: boxGrid-animation 0.8s forwards; }
-
-.fullImage-link-animation {
-  -webkit-animation: fullImage-link-animation 4s 0.5s forwards;
-          animation: fullImage-link-animation 4s 0.5s forwards;
-  width: 26%;
-  display: block; }
-
 @-webkit-keyframes link-animation {
-  0% {
-    left: 2.09vw; }
   50% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3.5vw; }
+    -webkit-transform: scale(1.1, 1.1) translateX(2vw);
+            transform: scale(1.1, 1.1) translateX(2vw); }
   70% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3vw; }
+    -webkit-transform: scale(1.1, 1.1) translateX(1vw);
+            transform: scale(1.1, 1.1) translateX(1vw); }
   90% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3.5vw; }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    left: 2.09vw; } }
-
+    -webkit-transform: scale(1.1, 1.1) translateX(2vw);
+            transform: scale(1.1, 1.1) translateX(2vw); } }
 @keyframes link-animation {
-  0% {
-    left: 2.09vw; }
   50% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3.5vw; }
+    -webkit-transform: scale(1.1, 1.1) translateX(2vw);
+            transform: scale(1.1, 1.1) translateX(2vw); }
   70% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3vw; }
+    -webkit-transform: scale(1.1, 1.1) translateX(1vw);
+            transform: scale(1.1, 1.1) translateX(1vw); }
   90% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-    left: 3.5vw; }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    left: 2.09vw; } }
-@-webkit-keyframes boxGrid-animation {
-  from {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
-@keyframes boxGrid-animation {
-  from {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
-@-webkit-keyframes fullImage-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  40% {
-    left: 15%;
-    -webkit-transform: rotate(35deg);
-            transform: rotate(35deg); }
-  100% {
-    left: 15%;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
-@keyframes fullImage-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  40% {
-    left: 15%;
-    -webkit-transform: rotate(35deg);
-            transform: rotate(35deg); }
-  100% {
-    left: 15%;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
-@-webkit-keyframes fullImage-link-animation {
-  0% {
-    top: 0vw; }
-  20% {
-    top: 6vw;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); }
-  42% {
-    -webkit-transform: rotateX(15deg) rotateY(-60deg);
-            transform: rotateX(15deg) rotateY(-60deg);
-    top: 5vw; }
-  53% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg); }
-  60% {
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-            transform: rotateX(0deg) rotateY(0deg); }
-  63% {
-    -webkit-transform: rotate(740deg);
-            transform: rotate(740deg);
-    top: 5vw; }
-  73% {
-    -webkit-transform: rotate(700deg);
-            transform: rotate(700deg);
-    top: 2.5vw; }
-  80% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
-    top: 0vw; }
-  87% {
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); }
-  90% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1); }
-  95% {
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
-@keyframes fullImage-link-animation {
-  0% {
-    top: 0vw; }
-  20% {
-    top: 6vw;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); }
-  42% {
-    -webkit-transform: rotateX(15deg) rotateY(-60deg);
-            transform: rotateX(15deg) rotateY(-60deg);
-    top: 5vw; }
-  53% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg); }
-  60% {
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-            transform: rotateX(0deg) rotateY(0deg); }
-  63% {
-    -webkit-transform: rotate(740deg);
-            transform: rotate(740deg);
-    top: 5vw; }
-  73% {
-    -webkit-transform: rotate(700deg);
-            transform: rotate(700deg);
-    top: 2.5vw; }
-  80% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
-    top: 0vw; }
-  87% {
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); }
-  90% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1); }
-  95% {
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
+    -webkit-transform: scale(1.1, 1.1) translateX(2vw);
+            transform: scale(1.1, 1.1) translateX(2vw); } }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,8 +7,6 @@
     src: url('../fonts/dosis-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/dosis-regular-webfont.woff') format('woff'),
          url('../fonts/Dosis-Regular.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -17,14 +15,12 @@
     src: url('../fonts/andada-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/andada-regular-webfont.woff') format('woff'),
          url('../fonts/Andada-Regular.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
-
 
 body {
 	padding: 0;
 	margin: 0;
+	font-family: $p-font;
 }
 
 .wrapper {
@@ -35,75 +31,70 @@ body {
 	padding: 5% 15% 0 15%;
 }
 
-
-/*masthead-image */
-
 .huge-images {
 	width: 100%;
-	height: auto;
 	z-index: -1;
 }
 
-.masthead-image {
+/*masthead-image */
+
+.masthead {
 	position: relative;
-}
 
-.masthead-iphone {
-	position: absolute;
-	right: 15%;
-	top: 35%;
-	width: 35%;
-	height: auto;
-	z-index: 999;
-}
-
-.take-logo {
-	position: absolute;
-	left: 15%;
-	top: 5%;
-	width: 5%;
-	height: auto;
-}
-
-.masthead-text {
-	position: absolute;
-	left: 15%;
-	top: 40%;
-	width: 25%;
-	
-
-	h1 {
-		@include create-font(3.5vw, $h1-font, $prim-font-color, $h1-shadow);
+	.masthead-phone {
+		position: absolute;
+		right: 15%;
+		top: 35%;
+		width: 35%;
+		z-index: 999;
 	}
 
-	p {
-		@include create-font(1.2vw, $p-font, $prim-font-color, $p-shadow);
-		margin-top: 10%;
+	.page-logo {
+		position: absolute;
+		left: 15%;
+		top: 5%;
+		width: 5%;
+	}
+
+	.masthead-contents {
+		position: absolute;
+		left: 15%;
+		top: 30%;
+		width: 30%;
+
+		.masthead-contents-header {
+			@include create-font(5vw, $h1-font, $prim-font-color, $h1-shadow);
+		}
+
+		.masthead-contents-description {
+			@include create-font(1.7vw, $p-font, $prim-font-color, $p-shadow);
+			margin-top: 10%;
+		}
 	}
 }
-
 
 /* end masthead-image */
 
 
 /* text */
 
-.text {
-	display: flex;
-	opacity: 0;
-
+.introduction {
+		
 	h1 {
-		@include create-font(2.5vw, $h1-font, $sec-font-color, null, 0.8);
-		margin-bottom: 10%;
+		@include create-font(3vw, $h1-font, $sec-font-color, null, 0.8);
 	}
 
 	p {
-		@include create-font(0.8vw, $p-font, $third-font-color);
+		@include create-font(1vw, $p-font, $third-font-color);
 	}
 
 }
 
-.text-box {
+.introduction-contents {
+	display: flex;
+}
+
+.introduction-box {
 	flex: 1;
 	
 	&:nth-child(1) {
@@ -114,7 +105,7 @@ body {
 		padding-left: 2%;
 	}
 
-	.take-all-text {
+	.introduction-box-text-wrapper {
 		margin-top: 30%;
 	}
 }
@@ -125,24 +116,23 @@ body {
 /* boxGrid */
 
 .boxGrid {
-	display:flex;
-	min-height: 14vw;
+	display: flex;
 
 	h1 {
-		@include create-font(2.2vw, $h1-font, $prim-font-color);
-		margin: 1rem 0;
+		@include create-font(2.5vw, $h1-font, $prim-font-color);
+		margin: 2vw 0;
 	}
 
 	p {
-		@include create-font(0.8vw, $p-font, $prim-font-color);
+		@include create-font(1vw, $p-font, $prim-font-color);
 		width: 80%;
-		margin: 2.5rem 0;
+		margin: 3vw 0 5vw 0;
 	}
 
 	.arrow {
-		@include create-font(0.9vw, $p-font, $prim-font-color);
+		@include create-font(1vw, $p-font, $prim-font-color);
 		position: absolute;
-		bottom: 2rem;
+		bottom: 10%;
 		text-decoration: none;
 		font-weight: bold;
 		cursor: pointer;
@@ -150,11 +140,14 @@ body {
 		&:hover {
 			animation: link-animation 1.5s forwards;
 		}
+
+		.icon-right {
+			margin-left: 0.5vw;
+		}
 	}
 
 	.heart {
 		font-size: 1.3vw;
-		font-family: $p-font;
 		position: absolute;
 		font-weight: bold;
 		bottom: 9%;
@@ -185,7 +178,6 @@ body {
 
 .boxGrid-box {
 	position: relative;
-	transform: scale(0,0);
 	padding: 0 3%;
 	transition: 1s;
 
@@ -208,7 +200,7 @@ body {
 
 	&:nth-child(3) {
 		background-image: url('../images/boxGrid-boxSmall.jpg');
-		background-size: 100% 100%;
+		background-size: cover;
 	}
 
 	&:last-of-type {
@@ -220,60 +212,65 @@ body {
 	@extend .boxGrid-box;
 	flex: 2.22;
 	background-image: url('../images/boxGrid-boxLarge.jpg');
-	background-size: 100% 100%;	
+	background-size: cover;	
 
 	p {
-		width:60%;
+		width: 60%;
 	}
 
 }
-
 
 /* end boxGrid */
 
 
-/* fourCol */
+/* columns */
 
-.fourCol {
-	opacity: 0;
+.columns {
 	display: flex;
 	flex-flow: wrap;
 
 	h1 {
-		@include create-font(2.5vw, $h1-font, $sec-font-color, null, 0.8);
+		@include create-font(3vw, $h1-font, $sec-font-color, null, 0.8);
 		flex-basis: 100%;
 	}
 
 	h4 {
-		@include create-font(0.9vw, $p-font, $sec-font-color, null, 0.8);
+		@include create-font(1.5vw, $p-font, $sec-font-color, null, 0.8);
 		margin-bottom: 5%;
 	}
 
 	p {
-		@include create-font(0.9vw, $p-font, $third-font-color);
+		@include create-font(1vw, $p-font, $third-font-color);
 	}
 }
 
-.fourCol-box {
+.columns-box {
 	flex:1;
-	padding: 0 1%;
+	margin-right: 2vw;	
 }
 
-/* end fourCol */
+/* end ccolumnts */
 
-/* fullImage */
+/* backgroundImage */
 
-.fullImage {
-	position:relative;
+.backgroundImage{
+	position: relative;
 	background-color: #82ca9c;
 
+	.backgroundImage-contents {
+		position:absolute;
+		left: 15%;
+		top: 15%;
+		width: 35%;
+	}
+
 	h1 {
-		@include create-font(3.3vw, $h1-font, $prim-font-color, $h1-shadow);
+		@include create-font(4.5vw, $h1-font, $prim-font-color, $h1-shadow);
 		margin-bottom: 10%;
 	}
 
 	p, a {
-		@include create-font(1vw, $p-font, $prim-font-color, $p-shadow);
+		@include create-font(1.4vw, $p-font, $prim-font-color, $p-shadow);
 	}
 
 	p {
@@ -281,135 +278,132 @@ body {
 	}
 
 	a {
+		display: inline-block;
 		position: relative;
 		text-decoration: none;
 		font-weight: bold;
-		width: 30%;
+
+		.icon-right {
+			margin-left: 0.5vw;
+		}
+
+		&:hover {
+			animation: link-animation 1.5s forwards;
+		}
 	}
 }
 
-.fullImage-text {
-	position:absolute;
-	left: -35%;
-	top: 40%;
-	width: 35%;
-}
-
-
-
-/* end fullImage */
+/* end backgroundImage */
 
 /* colour */
 
-.colour {
+.colour-columns {
 	background-color: #82ca9c;
 
 	h1 {
-		@include create-font(2.5vw, $h1-font, $prim-font-color);
+		@include create-font(3vw, $h1-font, $prim-font-color);
 		flex-basis: 100%;
 	}
 
-	p, h4 {
-		@include create-font(0.9vw, $p-font, $prim-font-color);
+	.columns {
+
+		h4 {
+			@include create-font(1.5vw, $p-font, $prim-font-color);
+		}
+
+		p {
+			@include create-font(1vw, $p-font, $prim-font-color);
+		}
 	}
-
-	h4 {
-		margin-bottom: 5%;
-	}
-}
-
-.colour-box {
-	flex: 1;
-	padding: 0 1%;
-}
-
-.colour-content {
-	opacity: 0;
-	display: flex;
-	flex-flow: wrap;
 }
 
 /* end colour */
 
-/*buying */
+/* buying */
 
 .buying {
 	background-color: #f6f7fa;
 	display:flex;
-}
 
-.buying-box {
-	flex:1;
-	padding: 0 5%;
-	transition: 2s;
-
-	&:hover span{
-		background-color: #bd8cbf;
-	}
-
-	&:hover {
-		background-color: #ffffff;
-		-webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
-	    -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
-		box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
-	}
-
-	&:nth-child(1) {
-		margin-right: 5%;
-	}
-
-	&:nth-child(2) {
-		margin-left: 5%;
-	}
-
-	span {
-		font-size: 0.8vw;
-		border-radius: 5%;
-		font-weight:bold;
-		color: #ffffff;
-		padding: 1.5%;
-		background-color: #e1e1e1;
+	.buying-box {
+		flex:1;
+		padding: 0 5%;
 		transition: 2s;
-		text-transform: uppercase;
-		margin-top: 8%;
-		display: inline-block;
-	}
 
-	h1 {
-		@include create-font(2.5vw, $h1-font, $sec-font-color, null, 0.8);
-		margin: 5% 0;
-	}
-
-	p {
-		@include create-font(0.8vw, $p-font, $third-font-color);
-		margin-bottom: 8%;
-	}
-
-	a {
-		@include create-font(1vw, $h1-font, $prim-font-color);
-		display:block;
-		text-decoration: none;
-		text-align: center;
-		width: 30%;
-		margin: 5% 0;
-		font-weight: bold;
-		background-color: #82ca9c;
-		border: none;
-		padding: 3% 5%;
-		border-radius: 5%;
-		letter-spacing: 0.1vw;
-		cursor:pointer;
-		transition: 1s;
-		text-transform: uppercase;
+		&:hover .buying-box-label {
+			background-color: #bd8cbf;
+		}
 
 		&:hover {
-			background-color: saturate(#82ca9c, 25);
+			background-color: #ffffff;
+			box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 		}
-	}
 
+		&:nth-child(1) {
+			margin-right: 5%;
+		}
+
+		&:nth-child(2) {
+			margin-left: 5%;
+		}
+
+		.buying-box-label {
+			font-size: 1vw;
+			border-radius: 5%;
+			color: #ffffff;
+			padding: 2%;
+			background-color: #e1e1e1;
+			transition: 2s;
+			text-transform: uppercase;
+			margin-top: 8%;
+			display: inline-block;
+		}
+
+		.buying-header {
+			@include create-font(3.5vw, $h1-font, $sec-font-color, null, 0.8);
+			margin: 5% 0;
+		}
+
+		.buying-description {
+			@include create-font(1vw, $p-font, $third-font-color);
+			margin-bottom: 8%;
+		}
+
+		.buying-button {
+			@include create-font(1.2vw, $h1-font, $prim-font-color);
+			display:block;
+			text-decoration: none;
+			text-align: center;
+			width: 35%;
+			margin: 5% 0;
+			font-weight: bold;
+			background-color: #82ca9c;
+			border: none;
+			padding: 3% 5%;
+			border-radius: 5%;
+			letter-spacing: 0.1vw;
+			cursor:pointer;
+			transition: 1s;
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: saturate(#82ca9c, 25);
+			}
+		}
+
+		.buying-icons {
+			color: $third-font-color;
+			margin-bottom: 8%;
+
+			i {
+				font-size: 1.3vw;
+			}
+		}
+
+	}
 }
 
-/* buying */
+/* end buying */
 
 /* footer */
 
@@ -418,22 +412,15 @@ body {
 	display: flex;
 
 	h4 {
-		@include create-font(1vw, $p-font, $prim-font-color);
+		@include create-font(1.5vw, $p-font, $prim-font-color);
 		margin-bottom: 5%;
 	}
 
 	p {
-		@include create-font(0.8vw, $p-font, $prim-font-color);
+		@include create-font(1vw, $p-font, $prim-font-color);
 	}
 
-	span {
-		@include create-font(0.6vw, $p-font, #57697f);
-		margin-top:15%;
-		display:block;
-		width: 50%;
-	}
-
-	input {
+	input[type="email"] {
 		width: 80%;
 		height: 2vw;
 		border:none;
@@ -441,9 +428,10 @@ body {
 		font-size: 1.3vw;
 		float:left;
 		padding: 0;
+		margin-bottom: 5%;
 	}
 
-	button {
+	.contact-button {
 		width: 20%;
 		height: 2vw;
 		border:none;
@@ -454,11 +442,12 @@ body {
 		float:right;
 		font-size: 1.2vw;
 		transition: 1s;
-	}
+		margin-bottom: 5%;
 
-	button:hover {
-		cursor: pointer;
-		background-color: saturate(#82ca9c, 20);
+		&:hover {
+			cursor: pointer;
+			background-color: saturate(#82ca9c, 20);
+		}
 	}
 
 	ul {
@@ -467,171 +456,66 @@ body {
 		margin: 1vw 0;
 	}
 
-	li {
-		height: 1.7vw;
-	}
-
 	a {
 		text-decoration: none;
-		@include create-font(0.8vw, $p-font, $prim-font-color);
+		@include create-font(1vw, $p-font, $prim-font-color);
 	}
-}
 
-.footer-box {
-	flex:1;
-	opacity: 0;
+	.footer-box {
+		flex:1;
 
-	&:nth-child(1) {
-		margin-right: 20%;
+		&:nth-child(1) {
+			margin-right: 20%;
+		}
 	}
-}
 
-.footer-text {
-	flex-basis: 100%;
-}
+	.footer-list-box {
+		flex: 1;
+	}
 
-.footer-form {
-	width: 50%;
-}
+	.footer-list {
+		margin-top: 10%;
+		display: flex;
+		
+		a {
+			padding: 0.2vw 0;
+			display: block;
+		}
+	}
 
-.footer-list-container {
-	margin-top: 10%;
-	display: flex;
-}
+	.footer-contents {
+		flex-basis: 100%;
+	}
+	
+	.footer-form {
+		width: 50%;
 
-.footer-list-box {
-	flex: 1;
+		li {
+			font-size: 1.2vw;
+		}
+
+		.form-description {
+			@include create-font(0.8vw, $p-font, #57697f);
+			padding-top: 10%;
+			display:block;
+		}
+	}
 }
 
 /* end footer */ 
 
-.fullImage-animation {
-	animation: fullImage-animation 1.5s forwards;
-}
-
-
-.boxGrid-animation {
-	animation: boxGrid-animation 0.8s forwards;
-}
-
-.fullImage-link-animation {
-	animation: fullImage-link-animation 4s 0.5s forwards;
-	width: 26%;
-	display: block;
-}
-
 @keyframes link-animation {
 
-	0% {
-		left: 2.09vw;
-	}
-
 	50% {
-		transform: scale(1.1, 1.1);
-		left: 3.5vw;
+		transform: scale(1.1, 1.1) translateX(2vw);
 	}
 
 	70% {
-		transform: scale(1.1, 1.1);
-		left: 3vw;
+		transform: scale(1.1, 1.1) translateX(1vw);
 	}
 
 	90% {
-		transform: scale(1.1, 1.1);
-		left: 3.5vw;
+		transform: scale(1.1, 1.1) translateX(2vw);
 	}
-
-	100% {
-		transform: scale(1, 1);
-		left: 2.09vw;
-	}		
-}
-
-@keyframes boxGrid-animation {
-	from {
-		transform: scale(0,0);
-	}
-	to {
-		transform: scale(1, 1);
-	}
-}
-
-@keyframes fullImage-animation {
-
-	0% {
-		transform: rotate(0deg);
-	}
-
-	40% {
-		left: 15%;
-		transform: rotate(35deg);
-	}
-
-	100% {
-		left: 15%;
-		transform: rotate(0deg);
-	}
-}
-
-
-@keyframes fullImage-link-animation {
-
-	0% {
-		top: 0vw;
-	}
-
-	20% {
-		top: 6vw;
-		transform: rotate(720deg);
-	}
-
-	42% {
-		transform: rotateX(15deg) rotateY(-60deg);
-		top: 5vw;
-	}
-
-	53% {
-		transform: rotateY(60deg);
 		
-	}
-
-	60% {
-		transform: rotateX(0deg) rotateY(0deg);
-	}
-
-	63% {
-		transform: rotate(740deg);
-		top: 5vw;
-	}
-
-	73% {
-		transform: rotate(700deg);
-		top: 2.5vw;
-	}
-	
-	80% {
-		transform: rotate(720deg);
-		top: 0vw;
-	}	
-
-	87% {
-		transform: scale(1.2, 1.2);
-		
-	}
-
-	90% {
-		transform: scale(1.1, 1.1);
-		
-	}
-
-	95% {
-		transform: scale(1.2, 1.2);
-		
-	}
-
-	100% {
-		transform: scale(1, 1);
-		
-	}
-
 }
