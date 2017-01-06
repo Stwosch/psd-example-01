@@ -34,6 +34,7 @@ body {
 .huge-images {
 	width: 100%;
 	z-index: -1;
+	display: block;
 }
 
 /*masthead-image */
@@ -190,15 +191,15 @@ body {
 .boxGrid-box-1 {
 	flex: 1;
 
-	&:nth-child(1) {
+	&:nth-child(2) {
 		background-color: #f5989d;
 	}
 
-	&:nth-child(2) {
+	&:nth-child(3) {
 		background-color: #615f7d;
 	}
 
-	&:nth-child(3) {
+	&:nth-child(4) {
 		background-image: url('../images/boxGrid-boxSmall.jpg');
 		background-size: cover;
 	}
@@ -249,13 +250,12 @@ body {
 	margin-right: 2vw;	
 }
 
-/* end ccolumnts */
+/* end columnts */
 
 /* backgroundImage */
 
 .backgroundImage{
 	position: relative;
-	background-color: #82ca9c;
 
 	.backgroundImage-contents {
 		position:absolute;
