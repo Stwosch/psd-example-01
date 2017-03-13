@@ -55,7 +55,7 @@ body {
 
 /* end masthead-image */
 /* text */
-.introduction h1 {
+.introduction h2 {
   font-size: 3vw;
   font-family: "Dosis-Font", sans-serif;
   color: #222626;
@@ -90,7 +90,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .boxGrid h1 {
+  .boxGrid h3 {
     font-size: 2.5vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
@@ -180,7 +180,7 @@ body {
   -webkit-flex-flow: wrap;
       -ms-flex-flow: wrap;
           flex-flow: wrap; }
-  .columns h1 {
+  .columns h2 {
     font-size: 3vw;
     font-family: "Dosis-Font", sans-serif;
     color: #222626;
@@ -188,7 +188,7 @@ body {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%; }
-  .columns h4 {
+  .columns h3 {
     font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #222626;
@@ -215,7 +215,7 @@ body {
     left: 15%;
     top: 15%;
     width: 35%; }
-  .backgroundImage h1 {
+  .backgroundImage h2 {
     font-size: 4.5vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
@@ -243,14 +243,14 @@ body {
 /* colour */
 .colour-columns {
   background-color: #82ca9c; }
-  .colour-columns h1 {
+  .colour-columns h2 {
     font-size: 3vw;
     font-family: "Dosis-Font", sans-serif;
     color: #ffffff;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%; }
-  .colour-columns .columns h4 {
+  .colour-columns .columns h3 {
     font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #ffffff; }
@@ -341,7 +341,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .footer h4 {
+  .footer h2 {
     font-size: 1.5vw;
     font-family: "Andada-Font", serif;
     color: #ffffff;
